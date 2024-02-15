@@ -2,10 +2,13 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Import for st.bar_chart
+from streamlit.elements import plotly
+
 # Fungsi untuk memuat data
 @st.cache
 def load_data():
-    return pd.read_csv("ecommerce.csv") 
+    return pd.read_csv("ecommerce.csv")
 
 # Fungsi untuk analisis data
 def data_analysis(df):
@@ -30,7 +33,7 @@ def data_analysis(df):
 
     # Menampilkan dataframe
     st.write("## Dataframe")
-    st.write(df)
+    st.dataframe(df)
 
 # Layout header
 def header():
@@ -40,19 +43,19 @@ def header():
 
 # Layout footer
 def footer():
-    st.write("Terima kasih telah menggunakan aplikasi ini. 🛒")
+    st.write("Terima kasih telah menggunakan aplikasi ini. ")
     st.write("Untuk sumber kode dan informasi lebih lanjut, kunjungi [github.com/username/repo](github.com/username/repo).")
 
-# Main function
+# Main function (recommended for clarity)
 def main():
     # Layout header
     header()
 
     # Sidebar
     st.sidebar.title("Pilihan")
-    menu = st.sidebar.radio("Pilih opsi:", ("Analisis Data", "Tentang"))
+    menu = st.sidebar.radio("Pilih menu:", ("Analisis Data", "Tentang"))
 
-    # Load data
+    # Load data (load only once on the first run)
     df = load_data()
 
     # Tampilkan halaman berdasarkan opsi yang dipilih
