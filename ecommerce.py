@@ -2,9 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Import for st.bar_chart
-from streamlit.elements import plotly
-
 # Fungsi untuk memuat data
 @st.cache
 def load_data():
