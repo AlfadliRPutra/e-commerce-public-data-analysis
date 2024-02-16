@@ -1,15 +1,22 @@
 ## README.md - Aplikasi Analisis Data E-Commerce dengan Streamlit
 
-Aplikasi ini memungkinkan Anda untuk menganalisis data transaksi e-commerce dan mendapatkan wawasan berharga. Dibangun dengan Streamlit, Pandas, dan Matplotlib.
+**Aplikasi ini memungkinkan Anda untuk menganalisis data transaksi e-commerce dan mendapatkan wawasan berharga.** Dibangun dengan Streamlit, Pandas, dan Matplotlib.
 
 ### Cara Penggunaan
 
 1. **Pastikan Python dan library yang dibutuhkan terinstal:**
 
-   - Python 3.7+
-   - Streamlit ([https://docs.streamlit.io/get-started/installation](https://docs.streamlit.io/get-started/installation))
-   - Pandas ([https://pandas.pydata.org/docs/getting_started/install.html](https://pandas.pydata.org/docs/getting_started/install.html))
-   - Matplotlib ([https://matplotlib.org/](https://matplotlib.org/))
+```bash
+pip install streamlit
+pip install -r requirements.txt
+```
+
+**Persyaratan:**
+
+- Python 3.7+
+- Streamlit ([https://docs.streamlit.io/get-started/installation](https://docs.streamlit.io/get-started/installation))
+- Pandas ([https://pandas.pydata.org/docs/getting_started/install.html](https://pandas.pydata.org/docs/getting_started/install.html))
+- Matplotlib ([https://matplotlib.org/](https://matplotlib.org/))
 
 2. **Clone atau unduh repository ini.**
 
@@ -17,17 +24,19 @@ Aplikasi ini memungkinkan Anda untuk menganalisis data transaksi e-commerce dan 
 
 4. **Jalankan aplikasi dengan perintah berikut:**
 
-   ```bash
-   streamlit run app.py
-   ```
+```bash
+streamlit run ecommerce.py
+```
 
-5. **Buka browser Anda dan kunjungi `http://localhost:8501`.**
+5. **Buka browser Anda.**
 
 6. **Pilih menu "Analisis Data" untuk melihat analitik.**
 
-   - Aplikasi akan menghitung AOV (Average Order Value) untuk semua pembayaran dan berdasarkan metode pembayaran.
-   - Visualisasi AOV dan jumlah transaksi berdasarkan metode pembayaran ditampilkan dalam bentuk bar chart.
-   - Dataframe transaksi lengkap juga ditampilkan.
+**Fitur:**
+
+- Menghitung AOV (Average Order Value) untuk semua pembayaran dan berdasarkan metode pembayaran.
+- Menampilkan visualisasi AOV dan jumlah transaksi berdasarkan metode pembayaran dalam bentuk bar chart.
+- Menampilkan dataframe transaksi lengkap.
 
 7. **Pilih menu "Tentang" untuk informasi aplikasi.**
 
@@ -39,6 +48,7 @@ Aplikasi ini memungkinkan Anda untuk menganalisis data transaksi e-commerce dan 
 ### Fitur Tambahan
 
 - Anda dapat memodifikasi kode untuk menambah fitur seperti:
+
   - Filter data berdasarkan tanggal, produk, atau kategori lainnya.
   - Tambah visualisasi data lainnya seperti line chart atau pie chart.
   - Buat widget interaktif untuk mengontrol analisis.
